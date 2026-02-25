@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CBB Dynasty Simulator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <p class="eyebrow">College Basketball Coach Simulation</p>
+      <h1>CBB Dynasty Simulator</h1>
+      <p class="lede">
+        A blueprint-driven management sim where NIL, transfer chaos, and coaching identity shape every season.
+      </p>
+      <div class="hero-actions">
+        <a href="#timeline" class="btn primary">View Season Loop</a>
+        <a href="#models" class="btn">Explore Core Models</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel" id="pillars">
+        <h2>Product Pillars</h2>
+        <div class="grid four">
+          <article>
+            <h3>Dynasty-First Depth</h3>
+            <p>50+ year saves stay coherent with era snapshots, records, and macro events.</p>
+          </article>
+          <article>
+            <h3>Modern CBB Volatility</h3>
+            <p>NIL economics, transfer pressure, and coaching carousel create realistic churn.</p>
+          </article>
+          <article>
+            <h3>Readable Causality</h3>
+            <p>Every outcome has inspectable drivers via model breakdowns and transparent formulas.</p>
+          </article>
+          <article>
+            <h3>Data + Personality Hybrid</h3>
+            <p>Ratings define baseline outcomes while morale, fit, and personality influence tails.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="timeline">
+        <h2>Annual Engine Timeline</h2>
+        <ol class="timeline"></ol>
+      </section>
+
+      <section class="panel" id="models">
+        <h2>Interactive System Models</h2>
+        <div class="grid two">
+          <article class="model-card">
+            <h3>Program Budget</h3>
+            <p>Estimate annual budget from core drivers.</p>
+            <div class="inputs" data-model="budget">
+              <label>Base <input type="number" name="base" value="24" /></label>
+              <label>Tickets <input type="number" name="tickets" value="9" /></label>
+              <label>Media Share <input type="number" name="media" value="14" /></label>
+              <label>Boosters <input type="number" name="boosters" value="6" /></label>
+              <label>NCAA Units <input type="number" name="units" value="4" /></label>
+              <label>Debt Service <input type="number" name="debt" value="5" /></label>
+              <label>Staffing Costs <input type="number" name="staffing" value="11" /></label>
+              <output data-result="budget"></output>
+            </div>
+          </article>
+
+          <article class="model-card">
+            <h3>Transfer Entry Pressure</h3>
+            <p>Values range from 0 to 100. Higher pressure means portal risk rises sharply.</p>
+            <div class="inputs" data-model="transfer">
+              <label>Minutes Dissatisfaction <input type="range" name="minutes" min="0" max="100" value="60" /></label>
+              <label>NIL Gap <input type="range" name="nil" min="0" max="100" value="45" /></label>
+              <label>Coach Trust Drop <input type="range" name="trust" min="0" max="100" value="35" /></label>
+              <label>Style Misfit <input type="range" name="style" min="0" max="100" value="40" /></label>
+              <label>Team Losing <input type="range" name="losing" min="0" max="100" value="50" /></label>
+              <label>Academic Risk <input type="range" name="academic" min="0" max="100" value="20" /></label>
+              <label>Peer Effect <input type="range" name="peer" min="0" max="100" value="30" /></label>
+              <output data-result="transfer"></output>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="systems">
+        <h2>Simulation Layers</h2>
+        <div class="grid five" id="layers"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Milestone Ship Plan</h2>
+        <div class="milestones" id="milestones"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built from <code>docs/cbb_sim_blueprint.md</code>. Deterministic seed + dynamic narratives = replayable dynasty chaos.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
